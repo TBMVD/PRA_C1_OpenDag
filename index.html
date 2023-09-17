@@ -8,13 +8,21 @@
     <title>Homepage</title>
 </head>
 
-<body>
+<body id="home">
     <header>
-        <div class="content_width">
-            <h1>CURIO</h1>
+        <img src="assets/img/logo.png" alt="">
+        <div>
             <nav>
-
-            </nav>
+                <a href="#home">Home</a>
+                <p>|</p>
+                <a href="#blokkensysteem">Blokkensysteem</a>
+                <p>|</p>
+                <a href="#versnellen">Versnellen</a>
+                <p>|</p>
+                <a href="#rooster">Rooster</a>
+                <p>|</p>
+                <a href="#docenten">Docenten</a>
+              </nav>
         </div>
     </header>
     <main>
@@ -34,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="blockSystem">
+        <div class="blockSystem" id="blokkensysteem">
             <div class="blockSystem_content">
                 <h2>Blokkensysteem</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil esse similique alias totam
@@ -49,7 +57,7 @@
                 <img src="assets/img/opleidingsoverzicht.png" alt="">
             </div>
         </div>
-        <div class="accelerate">
+        <div class="accelerate" id="versnellen">
             <div class="accelerate_content">
                 <h2>Versnellen</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil esse similique alias totam
@@ -58,7 +66,7 @@
             </div>
         </div>
         <div class="schedule">
-            <div class="content_width">
+            <div class="content_width" id="rooster">
                 <h2>Klassenrooster</h2>
                 <p>Hier zie je hoe het rooster er mogelijk uit kan zien</p>
                 <img src="assets/img/rooster.jpg" alt="">
@@ -66,7 +74,7 @@
         </div>
 
     </main>
-    <div class="teachers">
+    <div class="teachers" id="docenten">
         <div class="content_width">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quis ipsam sit voluptas perferendis
                 tempora. At, ipsa numquam, odio voluptas eaque distinctio libero voluptate iusto dolor, recusandae error
@@ -74,5 +82,16 @@
         </div>
     </div>
 </body>
+
+<script>
+    window.addEventListener("hashchange", function() {
+        var element = document.getElementById(location.hash.substring(1));
+        if (element) {
+            var rect = element.getBoundingClientRect();
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            window.scrollTo(0, rect.top + scrollTop - 100);
+        }
+    });
+</script>
 
 </html>
