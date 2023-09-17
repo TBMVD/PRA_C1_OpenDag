@@ -20,6 +20,10 @@
   font-family: Fellix;
 }
 
+p{
+  font-size: 1.25rem;
+}
+
 header {
   background-color: #2add5d;
   color: #03357c;
