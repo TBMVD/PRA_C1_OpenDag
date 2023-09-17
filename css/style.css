@@ -53,7 +53,7 @@ main {
 .image_content {
   width: 60%;
   min-height: 25rem;
-  background-image: url('../assets/img/lesgeving.jpg');
+  background-image: url('../assets/img/elton.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -98,4 +98,11 @@ main {
   margin-left: auto;
   margin-right: auto;
   width: 75%;
+}
+
+/* Footer */
+.teachers{
+  background-color: #ffcc00;
+  color: #69197c;
+  padding: 2rem 0;
 }
