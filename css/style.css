@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Fellix';
+  src: local("Fellix Bold"), local("Fellix-Bold"), url(../assets/fonts/Fellix-Bold.woff2) format("woff2"), url(../assets/fonts/Fellix-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Fellix';
+  src: local("Fellix Regular"), local("Fellix-Regular"), url(../assets/fonts/Fellix-Regular.woff2) format("woff2"), url(../assets/fonts/Fellix-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Fellix;
+}
+
+header {
+  background-color: #2add5d;
+  color: #03357c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+}
+
+main {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content_width {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* Voortekst */
+.pretext {
+  background-color: #ffcc00;
+  color: #69197c;
+  margin: 3rem 0;
+  padding: 4rem 0;
+}
+
+/* Afbeelding */
+.image_content {
+  width: 60%;
+  min-height: 25rem;
+  background-image: url('../assets/img/lesgeving.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tekst die over de afbeelding ligt */
+.text {
+  align-self: flex-end;
+  margin: -3rem 0 5rem;
+  width: 50%;
+  padding-right: 10%;
+  background-color: #03357c;
+  color: #ffcc00;
+}
+
+.text_content {
+  padding: 2rem 0 2rem 2rem;
+}
+
+/* Rooster */
+.schedule {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.schedule img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
