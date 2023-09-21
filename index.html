@@ -8,12 +8,12 @@
     <title>Homepage</title>
 </head>
 
-<body id="home">
+<body id="softwareDeveloper">
     <header>
         <img src="assets/img/logo.png" alt="">
         <div>
             <nav>
-                <a href="#home">Home</a>
+                <a href="#softwareDeveloper">Software Developer</a>
                 <p>|</p>
                 <a href="#blokkensysteem">Blokkensysteem</a>
                 <p>|</p>
@@ -84,14 +84,67 @@
 </body>
 
 <script>
-    window.addEventListener("hashchange", function() {
-        var element = document.getElementById(location.hash.substring(1));
-        if (element) {
-            var rect = element.getBoundingClientRect();
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            window.scrollTo(0, rect.top + scrollTop - 100);
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get all <a> elements within the <nav>
+        var links = document.querySelectorAll("nav a");
+
+        // Add a click event listener to each <a> element
+        links.forEach(function(link) {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Get the target element using the href attribute of the clicked <a> element
+                var targetId = link.getAttribute("href").substring(1);
+                var targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    // Calculate the target's position relative to the viewport
+                    var rect = targetElement.getBoundingClientRect();
+                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    var targetTop = rect.top + scrollTop - 100;
+
+                    // Smoothly scroll to the target element
+                    scrollToTarget(targetTop);
+                }
+            });
+        });
+
+        // Function to smoothly scroll to the target element
+        function scrollToTarget(targetTop) {
+            var duration = 500; // Duration of the scroll animation in milliseconds
+            var start = window.pageYOffset || document.documentElement.scrollTop;
+            var startTime;
+
+            // Animation function
+            function scrollAnimation(currentTime) {
+                if (!startTime) {
+                    startTime = currentTime;
+                }
+
+                var elapsedTime = currentTime - startTime;
+                var scrollPosition = easeInOutQuad(elapsedTime, start, targetTop - start, duration);
+
+                window.scrollTo(0, scrollPosition);
+
+                if (elapsedTime < duration) {
+                    requestAnimationFrame(scrollAnimation);
+                }
+            }
+
+            // Easing function for smoother animation
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(scrollAnimation);
         }
     });
 </script>
+
+
+
 
 </html>

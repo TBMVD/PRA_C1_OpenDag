@@ -103,7 +103,7 @@ main {
   align-self: flex-end;
   margin: -3rem 0 5rem;
   width: 50%;
-  padding-right: 10%;
+  padding-right: 12.5%;
   background-color: #03357c;
   color: #ffcc00;
 }
@@ -117,7 +117,7 @@ main {
   align-self: flex-start;
   margin: 0 0 5rem;
   width: 50%;
-  padding-left: 10%;
+  padding-left: 12.5%;
   background-color: #f9aecd;
   color: #014c35;
 }
