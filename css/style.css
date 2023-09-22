@@ -65,7 +65,7 @@ a {
   padding: 0.1rem;
 }
 
-a:hover{
+a:hover {
   text-decoration: underline;
 }
 
@@ -146,4 +146,9 @@ footer {
   color: #69197c;
   padding: 2rem 0;
   margin-top: 5rem;
+  text-align: end;
+}
+
+footer p {
+  margin-right: 2rem;
 }
