@@ -20,9 +20,7 @@
                 <a href="#versnellen">Versnellen</a>
                 <p>|</p>
                 <a href="#rooster">Rooster</a>
-                <p>|</p>
-                <a href="#docenten">Docenten</a>
-              </nav>
+            </nav>
         </div>
     </header>
     <main>
@@ -30,9 +28,10 @@
         <div class="pretext">
             <div class="content_width">
                 <h2>Wordt software developer bij Curio</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minima repellat beatae placeat
-                    magnam dolores nulla laboriosam fugit harum aspernatur itaque similique quia illum, ea officiis
-                    aliquam eos dolor alias.</p>
+                <p>Ben je gepassioneerd door technologie en wil je de wereld van softwareontwikkeling betreden? Bij
+                    Curio bieden we een uitstekend programma voor aspirant-softwareontwikkelaars. Leer de kunst van het
+                    programmeren en maak deel uit van een dynamische en groeiende gemeenschap van tech-liefhebbers.
+                    Ontdek hier alles wat je moet weten om een software developer bij Curio te worden.</p>
             </div>
         </div>
         <div class="image">
@@ -45,9 +44,16 @@
         <div class="blockSystem" id="blokkensysteem">
             <div class="blockSystem_content">
                 <h2>Blokkensysteem</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil esse similique alias totam
-                    nostrum amet nesciunt tenetur, eius possimus dignissimos sunt ipsa dicta, perferendis vel doloremque
-                    cum iusto. Dolore?</p>
+                <p>Bij Curio hanteren we een uniek blokkensysteem om je studie tot software developer soepel en flexibel
+                    te maken. Ons academisch jaar is verdeeld in twee blokken van elk een half jaar, en onze opleiding
+                    duurt in totaal vier jaar, van Blok A tot en met Blok G.<br><br>
+
+                    Het mooie van ons systeem is dat je geen volledig studiejaar hoeft over te doen als je een bepaald
+                    blok niet haalt. Je kunt gewoon dat specifieke blok opnieuw doen, wat betekent dat je een half jaar
+                    aan studietijd kunt besparen.<br><br>
+
+                    Dit systeem geeft je de flexibiliteit om op je eigen tempo te studeren en eventuele uitdagingen met
+                    specifieke vakken aan te pakken zonder een heel jaar te verliezen.</p>
             </div>
         </div>
         <div class="blockSchedule">
@@ -60,9 +66,16 @@
         <div class="accelerate" id="versnellen">
             <div class="accelerate_content">
                 <h2>Versnellen</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil esse similique alias totam
-                    nostrum amet nesciunt tenetur, eius possimus dignissimos sunt ipsa dicta, perferendis vel doloremque
-                    cum iusto. Dolore?</p>
+                <p>Bij Curio bieden we getalenteerde en gemotiveerde studenten de mogelijkheid om de opleiding tot
+                    software developer in slechts drie jaar af te ronden, in plaats van de gebruikelijke vier jaar. Na
+                    het succesvol afronden van Blok A, krijg je de kans om deel te nemen aan onze versnellingsklas.
+                    <br><br>
+
+                    In de versnellingsklas volg je dezelfde blokken als de reguliere studenten, maar met een extra vak
+                    genaamd "Delta" (Δ). Dit vak bevat alle lessen van Blok E, die verdeelt zijn over de rest van de
+                    studie.
+                    Hierdoor kun je de opleiding in een kortere tijd voltooien.
+                </p>
             </div>
         </div>
         <div class="schedule">
@@ -74,23 +87,22 @@
         </div>
 
     </main>
-    <div class="teachers" id="docenten">
-        <div class="content_width">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quis ipsam sit voluptas perferendis
-                tempora. At, ipsa numquam, odio voluptas eaque distinctio libero voluptate iusto dolor, recusandae error
-                vero eum.</p>
+    <footer>
+        <div>
+            <p id="copyright">&copy; Curio </p>
+            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
         </div>
-    </div>
+    </footer>
 </body>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         // Get all <a> elements within the <nav>
         var links = document.querySelectorAll("nav a");
 
         // Add a click event listener to each <a> element
-        links.forEach(function(link) {
-            link.addEventListener("click", function(event) {
+        links.forEach(function (link) {
+            link.addEventListener("click", function (event) {
                 event.preventDefault(); // Prevent the default link behavior
 
                 // Get the target element using the href attribute of the clicked <a> element
