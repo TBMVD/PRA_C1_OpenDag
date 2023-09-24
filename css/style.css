@@ -24,6 +24,10 @@ h2 {
   margin: 0 0 1rem 0;
 }
 
+h3 {
+  display: inline;
+}
+
 p,
 a {
   font-size: 1.25rem;
@@ -117,8 +121,8 @@ main {
   margin: 0 0 5rem;
   width: 50%;
   padding-left: 12.5%;
-  background-color: #f9aecd;
-  color: #014c35;
+  background-color: #ffcc00;
+  color: #69197c;
 }
 
 .accelerate_content {
@@ -140,10 +144,22 @@ main {
   width: 75%;
 }
 
+/* Lesstof */
+.subjects {
+  background-color: #03357c;
+  color: #ffcc00;
+  margin-top: 3rem;
+  padding: 3rem 0;
+}
+
+.inline{
+display: inline;
+}
+
 /* Footer */
 footer {
-  background-color: #ffcc00;
-  color: #69197c;
+  background-color: #2add5d;
+  color: #03357c;
   padding: 2rem 0;
   margin-top: 5rem;
   text-align: end;
@@ -151,4 +167,5 @@ footer {
 
 footer p {
   margin-right: 2rem;
+  font-weight: 700;
 }
